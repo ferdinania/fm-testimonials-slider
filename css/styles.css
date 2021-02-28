@@ -1,0 +1,243 @@
+:root {
+  /* Primary Colors */
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+  --opacity-dark-blue: rgba(32, 32, 70, .70);
+  --white: #fff;
+  /* Typography */
+  --font-size-default: 32px;
+  --font-default: 'Inter', sans-serif;
+  --font-thin: 300;
+  --font-regular: 500;
+  --font-bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: var(--font-default);
+  font-size: var(--font-size-default);
+}
+
+a {
+  text-decoration: none;
+}
+
+.testimonials--slider {
+  padding: 10px;
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.testimonials--item {
+  flex-shrink: 0;
+}
+
+.photo-user--wrapper {
+  background-image: url('../images/pattern-bg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 30px 20px;
+}
+.photo-user--image {
+  display: flex;
+  justify-content: center;
+}
+.photo-user--image img  {
+  box-shadow: 0px 45px 66px -39px var(--opacity-dark-blue);
+}
+.photo-user--action {
+  position: absolute;
+  background-color: var(--white);
+  padding: 0;
+  border-radius: 40px;
+}
+.photo-user--action ul.action--buttons {
+  list-style: none;
+}
+ul.action--buttons li {
+  display: inline-block;
+  padding: 1px 0;
+}
+li a {
+  padding: 0 10px;
+}
+
+.icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 3px;
+}
+
+.next {
+  background-image: url('../images/icon-next.svg');
+}
+.prev {
+  background-image: url('../images/icon-prev.svg');
+}
+
+.text-testimonial {
+  padding: 30px 20px;
+  text-align: center;
+  font-weight: var(--font-thin);
+  font-size: .6em;
+  line-height: 25px;
+  color: var(--dark-blue);
+  position: relative;
+}
+
+.text-quotes--icon {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 20px);
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/pattern-quotes.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.user--footer {
+  margin: 25px 0;
+}
+
+.text-gray {
+  color: var(--grayish-blue);
+}
+
+.text-small {
+  font-size: .8em;
+}
+
+.pattern-curves {
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  background-image: url('../images/pattern-curve.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.label--developer {
+  margin: 5px;
+  text-align: end;
+  font-size: .4em;
+  font-weight: var(--font-thin);
+}
+
+
+@media (min-width: 375px) {
+  .testimonials--slider {
+    width: 360px;
+    height: 100vh;
+  }
+  .testimonials--item {
+    width: 360px;
+    height: 100%;
+  }
+
+  .photo-user--wrapper {
+    background-position: center;
+  }
+
+  .photo-user--action {
+    bottom: 10px;
+    left: calc(50% - 40px);
+  }
+
+  .photo-user--image img {
+    width: 80%;
+  }
+
+  .pattern-curves {
+    height: 100px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .testimonials--slider {
+    width: 100%;
+    height: 100vh;
+  }
+  .testimonials--item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 90px;
+    position: relative;
+  }
+
+  .photo-user--wrapper {
+    width: 740px;
+    height: 740px;
+    background-size: 740px;
+    background-position: 0 10px;
+  }
+
+  .photo-user--image {
+    padding-top: 50px;
+  }
+
+  .photo-user--image img {
+    width: 570px;
+  }
+
+  .photo-user--action {
+    left: calc(30% - 40px);
+    bottom: calc(11% - 20px);
+    width: 130px;
+    height: 70px;
+  }
+  .icon {
+    margin-top: 25px;
+    margin-left: 15px;
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .text-testimonial {
+    position: absolute;
+    top: calc(50% - 200px);
+    left: 100px;
+    width: 55%;
+    text-align: left;
+    font-size: 1em;
+    line-height: 50px;
+    color: var(--opacity-dark-blue);
+  }
+
+  .user--footer {
+    display: flex;
+    flex-direction: row;
+  }
+  .user--footer h5 {
+    font-size: .6em;
+    margin-right: 10px;
+  }
+  .text-small {
+    font-size: .5em;
+  }
+
+
+  .pattern-curves {
+    height: 200px;
+    width: 50%;
+  }
+}
+
